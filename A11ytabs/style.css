@@ -1,0 +1,51 @@
+* *::before,
+*::after {
+    box-sizing: border-box;
+}
+:root {
+    --font-family: system-ui;
+    --fs-400: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
+    --fs-800: clamp(2.33rem, calc(1.7rem + 3.15vw), 4.14rem);
+    --fs-900: clamp(2.8rem, calc(1.85rem + 4.74vw), 5.52rem);
+}
+[role="tablist"] {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    font-size: var(--fs-400);
+   
+}
+
+[aria-selected="true"] {
+    text-decoration-thickness: 0.25em;
+    text-underline-offset: 0.5em;
+    color: orangered;
+}
+
+.tabs-container {
+    padding: 2.5rem;
+    border-radius: 0.5rem;
+    background: hsl(0 0% 50% / 0.1);
+}
+.wrapper {
+    width: min(50rem, 100% - 2rem);
+    margin-inline: auto;
+}
+
+.site-title {
+    font-size: var(--fs-900);
+    line-height: 1.05;
+    text-transform: uppercase;
+}
+
+.section-title {
+    font-size: var(--fs-800);
+    line-height: 1.1;
+}
