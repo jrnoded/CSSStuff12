@@ -3,7 +3,7 @@ let points = 5;
 
 function setup() {
     let canvas = createCanvas(800, 500);
-    
+
     canvas.parent("star-card");
 }
 
@@ -18,11 +18,24 @@ function draw() {
 }
 
 function mouseMoved() {
+    makeStar(mouseX, mouseY);
+}
+
+function touchMoved() {
+	if (touches.length > 0) {
+		let touch = touches[0];
+		makeStar(touch.x, touch.y);
+	}
+}
+function makeStar(mouseX, mouseY) {
     if (mouseX >= 0 && mouseY >= 0 && mouseX <= width && mouseY <= height) {
         points = 5;
-        if (mouseX < width / 2 && mouseY > height / 2 || mouseX > width / 2 && mouseY < height /2 ){
+        if (
+            (mouseX < width / 2 && mouseY > height / 2) ||
+            (mouseX > width / 2 && mouseY < height / 2)
+        ) {
             points = 9;
-        } 
+        }
         let star = new Star(mouseX, mouseY);
         stars.push(star);
     }
@@ -63,7 +76,7 @@ function star(x, y, radius1, radius2, npoints) {
     let halfAngle = angle / 2.0;
     fill(getColor(), getColor(), getColor());
     beginShape();
-    
+
     for (let a = 0; a < TWO_PI; a += angle) {
         let sx = x + cos(a) * radius2;
         let sy = y + sin(a) * radius2;
@@ -75,7 +88,7 @@ function star(x, y, radius1, radius2, npoints) {
     endShape(CLOSE);
 }
 function getColor() {
-    return randomNumber(0,255);
+    return randomNumber(0, 255);
 }
 function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
