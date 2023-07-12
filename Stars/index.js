@@ -2,7 +2,7 @@ let stars = [];
 let points = 5;
 
 function setup() {
-    let canvas = createCanvas(800, 500);
+    let canvas = createCanvas(800, 600);
 
     canvas.parent("star-card");
 }

@@ -1,20 +1,30 @@
 body {
-	background-color: AliceBlue;
+	background-color: LightBlue;
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	display: flex;
 	flex-direction: column;
-	overflow: hidden;
+    /* overflow: hidden; */
+	min-height: 100vh;
 
 }
 header {
 	text-align: center;
 }
 h1 {
-	font-size: 4rem;
+	font-size: 3rem;
+}
+blockquote {
+  font-size: 1.5rem;
+}
+cite {
+  font-size: 1rem;
 }
 .container {
 	display: flex;
-	justify-content: center;
+  flex-direction: column;
+/* 	justify-content: center; */
+	align-items: center;
+	/* gap: 2rem; */
 	height: 100vh;
 }
 
@@ -29,5 +39,7 @@ h1 {
 	cursor: crosshair;
 	position: relative;
 	overflow: hidden;
+  border: 12px inset silver;
 	box-shadow: 10px 10px 20px  rgba(0,0,0,0.5);
 }
+
