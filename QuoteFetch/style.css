@@ -16,16 +16,19 @@ body {
     background-color: antiquewhite;
     display:grid;
     align-items: baseline;
-    justify-items: center;
+    /* justify-items: center; */
     border: 2px solid brown;
     border-radius: 1rem;
 }
-#quote {
-    padding: 1rem;
-    text-align: center;;
+#quote,
+#author {
+    margin-left: 1rem;
+    padding-top: 1rem;
+    /* text-align: center;; */
 }
 #button {
     width: 12.5rem;
     height:3rem;
+    margin-left: 1rem;
 
 }
