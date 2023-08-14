@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Give+You+Glory&display=swap');
+
+body {
+	line-height: 1.6;
+	font-family: "Atkinson Hyperlegible", sans-serif;
+	background-color:hsl(34, 79%, 87%);
+}
+
+h1,
+h2 {
+	text-align: center;
+	font-size: var(--fs);
+	font-family: 'Give You Glory', cursive;
+}
+h1 {
+    text-shadow: 4px 4px 0px white;
+}
+article {
+	max-width: 80%;
+	margin: 0 auto;
+	padding: 20px;
+	max-height: 100vh;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 3rem;
+}
+
+figure {
+	width: fit-content;
+	display: grid;
+	place-content: center;
+
+	/* 	width: auto; */
+}
+figure img {
+	box-shadow: 5px 5px 5px black;
+}
+
+figcaption {
+	padding: 10px;
+	text-align: center;
+    position: relative;
+}
+figcaption::before,
+figcaption::after{
+    content:"";
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: red;
+    opacity: .75;
+    border-radius: 50%;
+    z-index: -1;
+    /* align-self: left; */
+}
+
+figcaption::before {
+    left: calc(50% - 5rem);
+}
+figcaption::after {
+    left: calc(50% + 4rem);
+}

@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Barriecito&display=swap");
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: "Barriecito", cursive;
+
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    background-color: gainsboro;
+}
+figure {
+    text-align: center;
+}
+img {
+    max-width: 60%;
+    max-height: 80vh;
+    margin: 0 auto;
+    display: block;
+}
+#apply-blend-mode {
+    margin-top: 10px;
+}
