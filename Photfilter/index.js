@@ -18,9 +18,19 @@ const msg = document.getElementById("msg");
 
 applyFilterButton.addEventListener("click", () => {
     let fltr = filters[randomNumber(0, 10)];
-    if (fltr != "none") {
-        fltr += "(" + (randomNumber(25,100)) + "%)";
+    switch (fltr) {
+        case "none":
+            break;
+        case "blur":            
+            fltr += "(" + randomNumber(1,25) + "px)";
+            break;
+        case "hue-rotate":
+            fltr += "(" + randomNumber(1,360) + "deg)";
+            break;
+        default: 
+        fltr += "(" + randomNumber(10,100 )+ "%)";
     }
+   
     filterImage.style.filter = fltr;
     msg.innerText = filterImage.style.filter;
 });
