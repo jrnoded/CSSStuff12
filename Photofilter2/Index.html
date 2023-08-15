@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+    <title>Photofilter</title>
+</head>
+
+<body>
+
+    <figure>
+        <input type="range" name="filters" id="filters" min="0" max="10" steps="1" value="0" list="markers"
+            orient="vertical">
+        <datalist id="markers">
+            <option value="0"></option>
+            <option value="1"></option>
+            <option value="2"></option>
+            <option value="3"></option>
+            <option value="4"></option>
+            <option value="5"></option>
+            <option value="6"></option>
+            <option value="7"></option>
+            <option value="8"></option>
+            <option value="9"></option>
+            <option value="10"></option>
+        </datalist>
+        <img id="filter-image"
+            src="https://images.unsplash.com/photo-1673031288723-f198cd527b97?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2OTE5ODAxNjZ8&ixlib=rb-4.0.3&q=85"
+            alt="3D rendered image of a group of green glass objects rising up out of a hole in a green table. "
+            title="Photo by Allison Saeng for Unsplash. ">
+        <input type="range" name="percent" id="percent" min="10" max="100" value="100" orient="vertical">
+    </figure>
+    <h2>Applied Filter is <span id="msg">None</span></h2>
+</body>
+
+</html>
