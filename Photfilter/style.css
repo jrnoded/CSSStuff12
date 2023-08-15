@@ -11,7 +11,9 @@ html {
     justify-items: center;
     background-color: gainsboro;
 }
-figure {
+figure,
+h2,
+p {
     text-align: center;
 }
 img {
@@ -22,4 +24,7 @@ img {
 }
 #apply-blend-mode {
     margin-top: 10px;
+}
+.explain {
+    max-width: 60%;
 }
