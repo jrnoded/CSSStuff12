@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Barriecito&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Caveat&display=swap');
 body,
 html {
     height: 100%;
@@ -27,4 +26,9 @@ img {
 }
 .explain {
     max-width: 60%;
+} 
+
+p {
+	font-family: 'Caveat', cursive;
+	font-size: 1.5rem
 }

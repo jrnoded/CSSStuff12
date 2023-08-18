@@ -27,7 +27,7 @@ img {
 input[type=range][orient=vertical] {
     appearance: slider-vertical;
     width: 16px;
-    /* max-height: 80vh; */
+    accent-color: green;
     padding: 0 5px;
     
   }
