@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Spin Out</title>
+</head>
+
+<body>
+    <p class="explain">The spin-and-delete animation is an exit animation. First, the card will spin on the y-axis, run
+        through a hue-rotation, and then at 80% through the timeline, transitions its opacity from 1 to 0. Finally, the
+        card swaps from display: block to display: none.
+
+        For these exit animations, instead of applying them directly to an element, you can set up a trigger for the
+        animations. For example by attaching an event listener to a button that triggers a class to apply the animation
+    </p>
+    <div class="card ">
+        <button class="delete-btn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Trash_font_awesome.svg" alt="close button">
+            <span class="sr-only">Delete</span>
+        </button>
+    </div>
+</body>
+<script>document.querySelector('.delete-btn').addEventListener('click', () => {
+        document.querySelector('.delete-btn').classList.add('fade-out');
+        document.querySelector('.card').classList.add('spin-out');
+    })</script>
+
+</html>

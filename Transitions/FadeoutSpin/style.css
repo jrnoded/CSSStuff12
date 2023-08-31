@@ -1,0 +1,85 @@
+/* Applied classes */
+.fade-out {
+    animation: fade-out 0.25s forwards;
+  }
+  
+  .spin-out {
+    animation: spin-and-delete 2s ease-in forwards;
+  }
+  
+  /* Keyframe animations */
+  @keyframes fade-out {
+    100% {
+      opacity: 0;
+      display: none;
+    }
+  }
+  
+  /* Rest of the demo */
+  @keyframes spin-and-delete {
+    0% {
+      transform: rotateY(0);
+      filter: hue-rotate(0);
+    }
+    80% {
+      transform: rotateY(360deg);
+      filter: hue-rotate(180deg);
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      display: none;
+    }
+  }
+  
+  @layer base {
+    body {
+      display: grid;
+      height: 90dvh;
+      place-items: center;
+    }
+    
+    .explain {
+        width: 50%;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .card {
+      width: 100%;
+      aspect-ratio: 2/3;
+      display: block;
+      background-color: tan;
+      position: relative;
+      border-radius: 1rem;
+      max-width: 220px;
+    }
+    
+    .delete-btn {
+      position: absolute;
+      top: -0.5rem;
+      right: -0.5rem;
+      width: 3rem;
+      height: 3rem;
+      padding: 0.5rem;
+      border: 2px solid;
+      border-radius: 100%;
+      background: white;
+      
+      &:hover,
+      &:focus {
+        background: lightgray;
+      }
+    }
+    
+    .sr-only {
+      border: 0;
+      clip: rect(1px, 1px, 1px, 1px);
+      clip-path: inset(50%);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+      white-space: nowrap;
+    }
+  }

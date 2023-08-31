@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Fade Out</title>
+</head>
+
+<body>
+    <p class="explain">This example animates the opacity to 0 over the 0.5s duration and then set display to none. Additionally, the forwards keyword ensures that the animation remains at its end state, so that the element it is applied to remains display: none and opacity: 0.</p>
+    <ul class="cards">
+        <li class="card">
+            <button class="delete-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Trash_font_awesome.svg"
+                    alt="close button">
+                <span class="sr-only">Delete</span>
+            </button>
+        </li>
+        <li class="card">
+            <button class="delete-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Trash_font_awesome.svg"
+                    alt="close button">
+                <span class="sr-only">Delete</span>
+            </button>
+        </li>
+        <li class="card">
+            <button class="delete-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Trash_font_awesome.svg"
+                    alt="close button">
+                <span class="sr-only">Delete</span>
+            </button>
+        </li>
+        <li class="card">
+            <button class="delete-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Trash_font_awesome.svg"
+                    alt="close button">
+                <span class="sr-only">Delete</span>
+            </button>
+        </li>
+    </ul>
+    <script>
+        document.querySelectorAll('.delete-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.parentElement.classList.add('fade-out');
+            })
+        })
+    </script>
+</body>
+
+</html>
