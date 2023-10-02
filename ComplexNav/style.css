@@ -1,0 +1,104 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: antiquewhite;
+    min-height: 100vh;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+}
+h1 {
+    text-align: center;
+}
+.navigation-menu {
+    padding: 0.5rem;
+    background-color: burlywood;
+    height: 3rem;
+    width: 98%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    box-shadow: 0px 5px 5px hsla(34, 64%, 50%, 0.407);
+}
+
+.navigation-menu li {
+    /* padding-inline: 4rem; */
+    /* display: inline-block; */
+    position: relative;
+    width: 200px;
+}
+.navigation-menu li a {
+    display: block;
+    /* padding: 0.625rem 1.125rem; */
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+}
+
+.navigation-menu li:hover > a {
+    /* background: antiquewhite; */
+    /* color: green; */
+    border-radius: 0.625rem;
+    padding: 0.625rem;
+}
+
+/* drop down */
+.navigation-menu ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: burlywood;
+    transition: all 0.5s ease-in-out;
+}
+.navigation-menu ul li:hover {
+    background-color: hsla(34, 78%, 91%, 0.531);
+}
+.navigation-menu ul ul {
+    top: 0;
+    left: 100%;
+}
+.navigation-menu ul li {
+    display: block;
+    padding: 0.625rem;
+}
+.navigation-menu ul li a {
+    padding: 0.625rem 1.125rem;
+}
+
+.navigation-menu li:hover > ul {
+    display: block;
+}
+/* .navigation-menu li.current-menu_item > a {
+    background: blue;
+} */
+.navigation-menu ul ul ul {
+    left: 100%;
+    top: 0;
+}
+.navigation-menu ul ul li:hover > ul {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+main {
+    padding: 2rem;
+    width: 100%;
+    height: 80vh;
+   \
+}
+.explain {
+    margin: auto;
+    width: 50%;
+    padding: 4rem 0 0 0;
+}
+footer {
+    text-align: center;
+}
+
