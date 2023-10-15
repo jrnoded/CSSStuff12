@@ -1,0 +1,107 @@
+body {
+    min-height: 300px;
+    height: 100vh;
+    position: relative;
+    background-color: #002525;
+    
+}
+div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+@media (max-width: 400px) {
+    div:not(.no-scale) {
+        transform: scale(0.8);
+    }
+}
+#bones {
+    width: 14em;
+    height: 14em;
+    margin-left: -7em;
+    margin-top: -7em;
+    background: radial-gradient(circle, #008b8b 50%, transparent 50.5%) 41% 40%/16%
+            16%,
+        radial-gradient(circle, #008b8b 50%, transparent 50.5%) 59% 40%/16% 16%,
+        linear-gradient(-60deg, #008b8b 35%, transparent 35.2%) 46.3% 48%/6% 7%,
+        linear-gradient(60deg, #008b8b 35%, transparent 35.2%) 53.7% 48%/6% 7%,
+        linear-gradient(70deg, transparent 20%, #0ff 20.2%) 33% 44%/26% 15%,
+        linear-gradient(-70deg, transparent 20%, #0ff 20.5%) 67% 44%/26% 15%,
+        linear-gradient(-54deg, #008b8b 40%, transparent 40.5%) 25.5% 32%/8% 8%,
+        linear-gradient(54deg, #008b8b 40%, transparent 40.5%) 74.5% 32%/8% 8%,
+        radial-gradient(ellipse, #0ff 32%, transparent 32.2%) 50% -33%/100% 80%,
+        repeating-linear-gradient(
+                to right,
+                #008b8b,
+                #008b8b 10%,
+                transparent 10%,
+                transparent 21%
+            )
+            51% 61%/19% 8%,
+        linear-gradient(#0ff, #0ff) 50% 54%/23% 10%,
+        linear-gradient(#0ff, #0ff) 50% 65%/30% 5%,
+        linear-gradient(67deg, #0ff 34%, transparent 34.2%) 38% 60.8%/8% 15%,
+        linear-gradient(-67deg, #0ff 34%, transparent 34.2%) 62% 60.8%/8% 15%,
+        radial-gradient(circle at 50% 38%, #008b8b 35%, transparent 35.2%) 0 0/100%
+            100%,
+        linear-gradient(#0ff, #0ff) 50% 72%/3% 3%,
+        linear-gradient(#0ff, #0ff) 50% 76.2%/3% 3%,
+        linear-gradient(#0ff, #0ff) 50% 83.1%/3% 3%,
+        linear-gradient(#0ff, #0ff) 50% 87.2%/3% 3%,
+        linear-gradient(#0ff, #0ff) 50% 93.2%/3% 3%,
+        linear-gradient(#0ff, #0ff) 50% 99.2%/3% 3%,
+        linear-gradient(#0ff, #0ff) 50% 79.2%/37% 1.5%,
+        radial-gradient(
+                ellipse at 50% 0,
+                transparent 40%,
+                #0ff 40.5%,
+                #0ff 45%,
+                transparent 45.5%
+            )
+            50% 93%/55% 12%,
+        radial-gradient(
+                ellipse at 50% 0,
+                transparent 40%,
+                #0ff 40.5%,
+                #0ff 45%,
+                transparent 45.5%
+            )
+            50% 99.5%/53% 12%,
+        radial-gradient(
+                ellipse at 50% 0,
+                transparent 40%,
+                #0ff 40.5%,
+                #0ff 45%,
+                transparent 45.5%
+            )
+            50% 106%/50% 12%,
+        linear-gradient(#008b8b, #008b8b) 50% 62%/36% 20%,
+        linear-gradient(#008b8b, #008b8b) 50% 100%/8% 50%,
+        linear-gradient(#0ff, #0ff) 25.3% 100%/2.6% 20%,
+        linear-gradient(#0ff, #0ff) 74.7% 100%/2.6% 20%,
+        radial-gradient(
+                circle,
+                #0ff 25%,
+                #008b8b 25.2%,
+                #008b8b 50%,
+                transparent 50.5%
+            )
+            22% 84%/14% 14%,
+        radial-gradient(
+                circle,
+                #0ff 25%,
+                #008b8b 25.2%,
+                #008b8b 50%,
+                transparent 50.5%
+            )
+            78% 84%/14% 14%,
+        linear-gradient(#008b8b, #008b8b) 24% 100%/7% 20%,
+        linear-gradient(#008b8b, #008b8b) 76% 100%/7% 20%,
+        linear-gradient(78deg, transparent 20%, #008b8b 20.2%) 35% 100.2%/25%
+            25%,
+        linear-gradient(-78deg, transparent 20%, #008b8b 20.2%) 65% 100.2%/25%
+            25%;
+    background-color: #003e3f;
+    background-repeat: no-repeat;
+    border-radius: 1em;
+}
