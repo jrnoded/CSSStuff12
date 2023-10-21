@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: hsl(192 80% 78% / 1);
+    display: grid;
+    place-content: center;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+li {
+    margin: 0.5rem;
+}
+li:nth-child(odd) {
+    padding-block: 1rem;
+}
+li:nth-child(even) {
+    background: white;
+    list-style-type: none;
+}
+.card,
+.example,
+.explain {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    border: 1px solid blue;
+}
+.card {
+    width: 400px;
+    aspect-ratio: 1/2;
+    /* border: 1px solid blue; */
+    padding: 0.5rem;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+#stripes {
+    background: linear-gradient(#6542de 0 0) bottom/100% 17% no-repeat,
+        linear-gradient(#6542de 1px, white 0) 0 -2px/100% calc(100% / 7) #ffedf8;
+}
+#disc {
+    background: conic-gradient(from 135deg at top, #b01479 90deg, #0000 0) 2px
+    5% / 10% 4% no-repeat;
+}
