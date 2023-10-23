@@ -34,8 +34,8 @@ li:nth-child(even) {
     border: 1px solid blue;
 }
 .card {
-    width: 400px;
-    aspect-ratio: 1/2;
+    width: 300px;
+    aspect-ratio: 1 / 2;
     /* border: 1px solid blue; */
     padding: 0.5rem;
     display: grid;
@@ -49,5 +49,13 @@ li:nth-child(even) {
 }
 #disc {
     background: conic-gradient(from 135deg at top, #b01479 90deg, #0000 0) 2px
-    5% / 10% 4% no-repeat;
+        5% / 10% 4% no-repeat;
+}
+
+#elipse {
+    background: radial-gradient(ellipse, #ffc24d 7.5vmin, transparent 1vmin)
+        20px 30px / 50% 20% no-repeat,
+        radial-gradient(ellipse at 50% 80%, green 40%, transparent 1vmin)
+        60px 80px / 80% 30%  no-repeat;
+        /* calc(-5vmin + 52vmin) calc(8vmin + 27vmin) / 15vmin 55vmin no-repeat; */
 }
