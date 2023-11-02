@@ -1,0 +1,17 @@
+body {
+    display: grid;
+    place-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+    gap: 1rem;
+    margin-inline: 100px;
+    margin-block: 50px;
+    font-family: sans-serif;
+  }
+  p {
+    text-wrap: var(--wrap);
+  }
+  
+  p:nth-child(2) {
+    text-wrap: pretty;
+  }
