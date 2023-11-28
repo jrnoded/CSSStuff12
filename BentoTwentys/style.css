@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;900&display=swap");
+
+:root {
+	--yellow: 47 74% 63%;
+	--dark: 229 36% 40%;
+	--light: 160 100% 91%;
+	--shadow: 5px 5px 30px hsl(0 0% 100%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: hsl(var(--light) / 1);
+	min-height: 100vh;
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	gap: 2rem;
+	font-family: "Barlow", sans-serif;
+  font-size: 1.2rem;
+}
+
+h1 {
+	margin: 2rem;
+	padding: 1rem;
+	font-size: 3rem;
+	background: linear-gradient(
+		135deg,
+		hsl(var(--dark) / 0.35) 30%,
+		hsl(var(--dark) / 0.2) 61%
+	);
+
+	border-radius: 1rem;
+}
+h1,
+h2 {
+	text-decoration: underline;
+}
+h2 {
+	padding-bottom: 1rem;
+}
+.profile {
+	text-align: center;
+}
+
+.profile .seize {
+	font-size: 1.5rem;
+	transform: rotate(-5deg) translateY(-10px);
+
+}
+.dashboard {
+	margin: 2rem;
+	display: grid;
+	width: 70%;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-areas:
+		"week week"
+		"last cal"
+		"best chal"
+		"act act";
+	gap: 0.25rem;
+	background: hsl(var(--dark) / 0.7);
+	/* border: 2px solid blue; */
+	box-shadow: var(--shadow);
+	border-radius: 1rem;
+}
+.dashboard > div {
+	margin: 1rem;
+	padding: 2rem;
+	/* border: 2px solid blue; */
+	background: linear-gradient(
+		-135deg,
+		hsl(var(--light) / 0.75) 30%,
+		hsl(var(--light) / 0.6) 61%
+	);
+	box-shadow: var(--shadow);
+	border-radius: 1rem;
+	transition: all 1.5s ease-in-out;
+}
+.dashboard > div:hover {
+	transform: scale(0.92) rotate(2deg);
+}
+table {
+	width: 100%;
+	box-shadow: var(--shadow);
+	border: 1p
+}
+th {
+	text-align: left;
+	text-decoration: underline;
+	text-decoration-thickness: 0.15em;
+	text-underline-offset: 0.2em;
+}
+tr:nth-child(even) {
+    background-color: hsl(var(--light) / 1);
+}
+.schedule-table {
+	grid-area: week;
+}
+.activity-feed {
+	grid-area: act;
+}
+.calories {
+	grid-area: cal;
+}
+ul {
+    list-style: none;
+}
+ul > li:before {
+    content: '🌞 ';
+}
+
