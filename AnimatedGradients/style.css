@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --first: hsl(248, 33%, 22%);
+    --second: rgba(231, 155, 243, 0.516);
+    --shadow: hsla(0, 0%, 0%, 0.734);
+}
+body {
+    min-height: 100vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: var(--second);
+    background: linear-gradient(
+        var(--deg),
+        var(--first) calc(var(--col) * 1%),
+        var(--second) calc((var(--col) + 5) * 1%),
+        var(--first) calc((var(--col) + 10) * 1%)
+    );
+    animation: wipe 10s linear infinite;
+}
+
+.card {
+    width: 300px;
+    aspect-ratio: 1 / 1;
+    color: white;
+    margin: auto;
+}
+.card p {
+    padding: 5px;
+    margin: 5px;
+}
+.card.wiper {
+    box-shadow: 5px 5px 10px var(--shadow);
+    background: linear-gradient(
+        var(--deg),
+        var(--first) calc(var(--col) * 1%),
+        var(--second) calc((var(--col) + 5) * 1%),
+        var(--first) calc((var(--col) + 10) * 1%)
+    );
+    animation: wipe 10s linear infinite;
+}
+.card.radial {
+    box-shadow: 5px 5px 10px var(--shadow);
+    background: radial-gradient(
+        circle,
+        var(--second) var(--pc),
+        var(--first) calc(var(--pc) + 10%)
+    );
+    animation: grow 5s ease infinite;
+}
+@property --pc {
+    syntax: "<percentage>";
+    initial-value: 0%;
+    inherits: false;
+}
+@property --col {
+    syntax: "<number>";
+    initial-value: 10;
+    inherits: false;
+}
+@property --deg {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+@keyframes wipe {
+    0%,
+    100% {
+        --col: 100;
+        --deg: 90deg;
+    }
+    50% {
+        --col: 0;
+        --deg: 90deg;
+    }
+}
+@keyframes grow {
+    0%,
+    100% {
+        --pc: 0%;
+    }
+    50% {
+        --pc: 60%;
+    }
+}

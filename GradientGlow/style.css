@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --first: hsl(248, 33%, 22%);
+    --second: rgba(231, 155, 243, 0.516);
+    --shadow: 5px 5px 10px var(--second);
+}
+body {
+    min-height: 100vh;
+    width: 100vw;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    font-family: 'Smooch Sans', sans-serif;
+    background: linear-gradient(
+        var(--deg),
+        var(--first) calc(var(--col) * 1%),
+        var(--second) calc((var(--col) + 5) * 1%),
+        var(--first) calc((var(--col) + 10) * 1%)
+    );
+    animation: wipe 10s linear infinite;
+}
+.dashboard {
+    display: grid;
+    max-width: 1200px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas:
+        "profile profile"
+        "sked sked"
+        "last cal"
+        "best chal"
+        "feed feed"
+        ;
+}
+.profile {
+    grid-area: profile;
+    text-align: center;
+}
+.schedule-table {
+    grid-area: sked;
+    padding: 2rem;
+    margin: 2rem;
+    background: var(--first);
+}
+.exercise-table {
+    grid-area: last;
+    background: var(--first);
+}
+.calories {
+    grid-area: cal;
+}
+.personal-bests {
+    grid-area: best;
+}
+.challenges{
+    grid-area: chal;
+}
+.activity-feed {
+    grid-area: feed;
+}
+table {
+	width: 100%;
+	box-shadow: var(--shadow);
+	border: 1px solid var(--second)
+}
+th {
+	text-align: left;
+	text-decoration: underline;
+	text-decoration-thickness: 0.15em;
+	text-underline-offset: 0.2em;
+}
+tr:nth-child(even) {
+    background-color: var(--second);
+}
+
+.card {
+  
+    color: white;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+    box-shadow: var(--shadow);
+}
+.card p {
+    padding: 5px;
+    margin: 5px;
+}
+.card.wiper {
+    box-shadow: 5px 5px 10px var(--shadow);
+    background: linear-gradient(
+        var(--deg),
+        var(--first) calc(var(--col) * 1%),
+        var(--second) calc((var(--col) + 5) * 1%),
+        var(--first) calc((var(--col) + 10) * 1%)
+    );
+    animation: wipe 10s linear infinite;
+}
+.card.radial {
+    box-shadow:  var(--shadow);
+    background: radial-gradient(
+        circle,
+        var(--second) var(--pc),
+        var(--first) calc(var(--pc) + 10%)
+    );
+    animation: grow 15s ease infinite;
+}
+@property --pc {
+    syntax: "<percentage>";
+    initial-value: 0%;
+    inherits: false;
+}
+@property --col {
+    syntax: "<number>";
+    initial-value: 10;
+    inherits: false;
+}
+@property --deg {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+@keyframes wipe {
+    0%,
+    100% {
+        --col: 100;
+        --deg: 90deg;
+    }
+    50% {
+        --col: 0;
+        --deg: 90deg;
+    }
+}
+@keyframes grow {
+    0%,
+    100% {
+        --pc: 0%;
+    }
+    50% {
+        --pc: 60%;
+    }
+}
