@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+
+:root {
+    --fc: #84563c;
+    --sc: #490206;
+    --chocolate: hsl(32, 100%, 24%);
+    --cup: hsl(41, 42%, 81%);
+    --width: 300px;
+    --mwidth: 35px;
+    --shadow: 4px 4px 8px var(--chocolate);
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    font-family: "Satisfy", cursive;
+}
+
+div {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    /* 	overflow-x: hidden; */
+    top: 0;
+    display: grid;
+    place-items: center;
+}
+.light {
+    left: 0;
+    background-image: linear-gradient(
+        to right,
+        var(--fc),
+        var(--fc) 50%,
+        var(--sc) 50%,
+        var(--sc)
+    );
+}
+.light::after {
+    content: "Hover over your favorite chocolate!";
+    position: absolute;
+    color: white;
+    top: 2rem;
+    font-size: 1.75rem;
+    z-index: 5;
+}
+.dark {
+    right: 0;
+    background-image: linear-gradient(
+        to right,
+        var(--fc),
+        var(--fc) 50%,
+        var(--sc) 50%,
+        var(--sc)
+    );
+}
+.cup {
+    width: var(--width);
+    height: var(--width);
+    background-color: var(--chocolate);
+    border-radius: 50%;
+    border: calc(var(--width) * 0.05) solid var(--cup);
+    position: absolute;
+    box-shadow: var(--shadow);
+    animation: spin 120s linear infinite;
+    top: calc(50% - calc(var(--width) / 2));
+}
+.light .cup {
+    background-color: var(--fc);
+}
+.dark > .cup {
+    background-color: var(--sc);
+}
+/* .cup::before {
+	content: "";
+	background-image: url(https://assets.codepen.io/5525772/bubbles.svg);
+	background-size: 60px;
+	background-repeat: no-repeat;
+	position: absolute;
+	height: 80px;
+	width: 80px;
+	left: 50%;
+	top: 30%;
+	rotate: 99deg;
+} */
+
+.cup::after {
+    content: "";
+    position: absolute;
+    width: calc(var(--width) * 0.225);
+    height: calc(var(--width) * 0.06);
+    background-color: var(--cup);
+    left: calc(var(--width));
+
+    top: calc((var(--width) / 2) - calc(var(--width) * 0.06));
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    z-index: 99;
+}
+
+.mm {
+    position: absolute;
+    width: var(--mwidth);
+    height: var(--mwidth);
+    top: var(--mmtop);
+    left: var(--mmleft);
+    /* 	aspect-ratio: 1 / 1; */
+    background: white;
+    box-shadow: inset -5px -5px 15px rgba(0, 0, 0, 0.421),
+        5px 5px 10px rgba(255, 255, 255, 0.799);
+    border-radius: 78% 57% 77% 57% / 70% 93% 40% 57%;
+}
+.mm:nth-child(1) {
+    --mmleft: 45px;
+    --mmtop: 40px;
+    rotate: 33deg;
+}
+.mm:nth-child(2) {
+    --mmleft: 90px;
+    --mmtop: 50px;
+    rotate: 93deg;
+}
+.mm:nth-child(3) {
+    --mmleft: 180px;
+    --mmtop: 90px;
+    rotate: 63deg;
+}
+.mm:nth-child(4) {
+    --mmleft: 200px;
+    --mmtop: 210px;
+    rotate: 33deg;
+}
+.mm:nth-child(5) {
+    --mmleft: 100px;
+    --mmtop: 200px;
+    rotate: 133deg;
+}
+.mm:nth-child(6) {
+    --mmleft: 180px;
+    --mmtop: 20px;
+    rotate: 300deg;
+}
+
+.title {
+    font-size: 1.75rem;
+}
+
+.title:hover {
+    color: var(--sc);
+    text-shadow: 3px 3px 3px hsl(0, 0%, 100%);
+}
+
+.title.dc {
+    color: var(--sc);
+}
+.title.mc {
+    color: var(--fc);
+}
