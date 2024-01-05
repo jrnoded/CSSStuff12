@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --from_color: hsl(0, 0%, 50%);
+    --to_color: hsl(0, 0%, 75%);
+}
+
+#toggle:checked + label {
+    --from_color: hsl(0, 0%, 75%);
+    --to_color: hsl(0, 0%, 50%);
+}
+
+label {
+    background: linear-gradient(
+        90deg,
+        var(--from_color) 50%,
+        var(--to_color) 50%
+    );
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid black;
+    text-shadow: 2px 2px 4px black;
+    box-shadow: 5px 5px 10px hsla(0, 0%, 0%, 0.497);
+}
+
+.visually-hidden {
+    position: absolute;
+    left: -100vw;
+
+    /* Note, you may want to position the checkbox over top the label and set the opacity to zero instead. It can be better for accessibilty on some touch devices for discoverability. */
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font: 900 24px/1.4 -system-ui, sans-serif;
+}
