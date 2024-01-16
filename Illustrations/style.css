@@ -1,0 +1,57 @@
+
+* ,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+@property --inner_clr {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: hsl(0 0% 00% / .7);
+  }
+  @property --outer_clr {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: orange;
+  }
+:root {
+    --radius: 50%;
+    --width: 400px;
+}
+body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    grid-template-areas: "hero";
+    background: rgb(129,129,129);
+
+}
+.inner {
+    width: var(--width);
+    aspect-ratio: 1 / 1;
+    grid-area: hero;
+    background: red;
+    border-radius: var(--radius);
+}
+img {
+    display: block;
+    max-width: 100%;
+    border-radius: var(--radius);
+}
+.outer {
+    width: var(--width);
+    aspect-ratio: 1 / 1;
+    background: radial-gradient( var(--inner_clr) var(--radius), var(--outer_clr) var(--radius));
+    border-radius: 20px;
+    transition: all 2s ease-in-out ;
+    grid-area: hero;
+	  cursor: pointer;
+}
+
+.outer:hover {
+    scale: 1.4;
+    --inner_clr: transparent; 
+	 border-radius:var(--radius);
+    
+}

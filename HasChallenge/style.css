@@ -1,0 +1,99 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* dark mode user-agent-styles */
+/* improves punctuation in supported browsers */
+html {
+  color-scheme: dark light;
+  hanging-punctuation: first last;
+}
+
+/* min body height */
+body {
+  min-height: 100svh;
+  display: grid;
+  place-content: center;
+  background: #333;
+}
+
+/* responsive images/videos */
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* Improved heading in supported browsers */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  text-align: center;
+}
+
+/* improve readability with max-width on paragraphs and lists */
+/* prevent orphans in supported browsers */
+p,
+li {
+  max-width: var(--p-max-width, 65ch);
+  text-wrap: pretty;
+}
+
+#mainview {
+    width: 600px;
+    aspect-ratio: 1 / 1;
+    background: whitesmoke;
+    background: linear-gradient(blue,red);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    gap: 2rem;
+    border-radius: 10px;
+    transition: 750ms ease-in-out;
+    box-shadow: 5px 5px 5px hsla(0, 0%, 100%, 0.533);
+
+}
+
+.card {
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    display: grid;
+    place-items: center;
+    background: var(--clr);
+    border-radius: 100vw;
+    cursor: pointer;
+    border: 2px solid whitesmoke;
+    transition: 500ms;
+}
+.card h2 {
+    font-size: 2rem;
+    color: var(--clr);
+}
+.card:hover {
+    background: black;
+}
+#mainview:has(.card:hover) {
+    background: linear-gradient(90deg,red,blue);
+    
+}
+
+#mainview:has(.card:hover) .card:not(:hover) 
+{
+    scale: 0.7;
+}
