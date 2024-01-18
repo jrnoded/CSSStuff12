@@ -59,7 +59,7 @@ li {
     width: 600px;
     aspect-ratio: 1 / 1;
     background: whitesmoke;
-    background: linear-gradient(blue,red);
+    background: linear-gradient(45deg, blue,red, yellow, green);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     place-items: center;
@@ -80,6 +80,7 @@ li {
     cursor: pointer;
     border: 2px solid whitesmoke;
     transition: 500ms;
+    box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.533);
 }
 .card h2 {
     font-size: 2rem;
@@ -89,7 +90,7 @@ li {
     background: black;
 }
 #mainview:has(.card:hover) {
-    background: linear-gradient(90deg,red,blue);
+    background: linear-gradient(135deg,green, yellow, red,blue);
     
 }
 
