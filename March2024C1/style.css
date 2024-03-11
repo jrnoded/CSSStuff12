@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: hsl(0, 0%, 86%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui;
+}
+#cards {
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    justify-content: center;
+    gap: 1.2rem;
+}
+.card {
+    width: 200px;
+    aspect-ratio: 1 / 1;
+/*     border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+	border-radius: 15px;
+    box-shadow: 5px 5px 10px hsl(0 0 0 / 0.5);
+    background-repeat: no-repeat;
+   
+    
+}
+.card h2{
+    background: white;
+	color: black;
+    padding: .25rem;
+    border-radius: .4rem;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.card svg {
+    fill: red;
+}
+
+.card:nth-child(1):hover {
+    counter-reset:card 12;
+}
+.card:nth-child(2):hover {
+    counter-reset:card 1;
+}.card:nth-child(3):hover {
+    counter-reset:card 4;
+}.card:nth-child(4):hover {
+    counter-reset:card 1;
+}.card:nth-child(5):hover {
+    counter-reset:card 5;
+}.card:nth-child(6):hover {
+    counter-reset:card 3;
+}.card:nth-child(7):hover {
+    counter-reset:card 2;
+}.card:nth-child(8):hover {
+    counter-reset:card 2;
+}.card:nth-child(9):hover {
+    counter-reset:card 0;
+}
+
+.card:hover ~ .card:nth-child(9)::after {
+    content: counter(card);
+    position: absolute;
+    font-size: 2rem;
+    top: 60%;
+    left: 60%;
+   
+}
+.card:hover ~ .card:nth-child(9) svg {
+   animation: ring 500ms 5 linear; 
+}
+@keyframes ring {
+    0% {
+        rotate: 0;
+    }
+    33% {
+        rotate: -10deg;
+    }
+    66% {
+        rotate: 10deg;
+    }
+    
+}
