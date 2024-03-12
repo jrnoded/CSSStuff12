@@ -1,0 +1,56 @@
+body {
+	background: linear-gradient(to right, #6b2566, #d40eba);
+	font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+#show {
+    display: block;
+    padding: 2rem;
+    outline: none;
+    border: none;   
+    font-size: 2rem;
+    border-radius: 100%;
+    box-shadow: 10px 10px 20px hsl(0 0% 0% / 0.5),
+                inset 5px -5px 10px hsl(0 0% 0% / 0.4);
+}
+.toast {
+	visibility: hidden;
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	background-color: #310434;
+	color: whitesmoke;
+	padding-block: .5rem;
+    padding-inline: 1rem;
+	text-align: center;
+    border-radius: .5rem;
+}
+.visible {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s forwards;
+}
+
+@keyframes fadein {
+	from {
+		bottom: 0;
+		opacity: 0;
+	}
+	to {
+		bottom: 20px;
+		opacity: 1;
+	}
+}
+
+@keyframes fadeout {
+	from {
+		bottom: 20px;
+		opacity: 1;
+	}
+	to {
+		bottom: 0;
+		opacity: 0;
+	}
+}
