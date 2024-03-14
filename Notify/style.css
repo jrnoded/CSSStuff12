@@ -1,5 +1,5 @@
 body {
-	background: linear-gradient(to right, #6b2566, #d40eba);
+	background:radial-gradient(308px circle at 93.71% 92.97%, #cb09c4 0%, #950ef4 100%);
 	font-family: sans-serif;
     display: flex;
     justify-content: center;
