@@ -1,0 +1,18 @@
+body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   
+}
+
+#maze_container{
+  border: 2px solid black;
+  width: 600px;
+  height: 500px;
+}
+#maze_container > div{
+    color: greenyellow;
+    width: 20px;
+    height: 20pox
+}

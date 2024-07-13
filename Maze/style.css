@@ -1,0 +1,60 @@
+body {
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background: gainsboro;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+}
+
+section {
+    background: black;
+    width: 312px;
+    aspect-ratio: 1 / 1;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(6, 50px);
+    grid-template-rows: repeat(6, 50px);
+    gap: 2px;
+    border: 2px solid;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5) "";
+}
+div {
+    width: 50px;
+    height: 50px;
+    background: white;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+	cursor: pointer;
+}
+.path {
+    color: white;
+}
+/* .path:hover {
+    color: black;
+    background: gainsboro;
+} */
+.block {
+    background: grey;
+}
+#start {
+    background: palegreen;
+}
+#start:hover {
+    background: green;
+    color: white;
+}
+#end {
+    background: tomato;
+}
+/* #end:hover {
+    background: red;
+    color: white;
+} */
+.picked {
+    background-color: lightgreen;
+}
