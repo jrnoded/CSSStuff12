@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+    <div class="wrapper" >
+        <p class="instruct">Select Rock ✊ Paper ✋ Scissors ✌️</p>
+        <div id="computer">
+           
+            <div class="emoji">✊</div>
+            <div class="emoji">✋</div>
+            <div class="emoji">✌️</div>
+            <div class="emoji">👉</div>
+        </div>
+        <div id="player">
+
+            <div class="emoji" onclick="playerSelect(0)">
+                <p>✊</p>
+            </div>
+            <div class="emoji" onclick="playerSelect(1)">
+                <p>✋</p>
+            </div>
+            <div class="emoji" onclick="playerSelect(2)">
+                <p>✌️</p>
+            </div>
+
+        </div>
+        <p class="instruct" id="result">Result</p>
+    </div>
+
+</body>
+
+</html>
