@@ -3,10 +3,15 @@ var result = document.getElementById("result");
 
 function getComputerChoice() {
     for (const element of elements) {
-        element.style.display = "none";
+         element.style.display = "inline";
+         element.style.transform = 'scale(1)';
+        // element.style.opacity = 0;
     }
     let rnd = getRandomInt(3);
     elements.item(rnd).style.display = "inline";
+    // elements.item(rnd).style.opacity = 1;
+    elements.item(rnd).style.transform = 'scale(1.4)';
+
     return rnd;
 }
 function getRandomInt(max) {
