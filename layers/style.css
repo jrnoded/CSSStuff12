@@ -1,0 +1,51 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Asset&display=swap');
+
+
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: rgba(4, 80, 135, 0.572);
+}
+
+.box {
+    width: fit-content;
+    aspect-ratio: 1;
+    color: transparent;
+    text-transform: uppercase;
+    background-clip: text;
+    background-image: url("https://assets.codepen.io/5525772/_DSF2192.jpg");
+}
+
+
+h1,
+h2,
+h3 {
+    text-align: center; 
+    font-weight: 900;
+}
+h1 {
+    margin-top: -6rem;
+    font-size: 8rem;
+   
+}
+
+h2 {
+    margin-top: -4rem;
+    font-size: 6rem;
+  
+}
+h3 {
+    font-size: 4rem;
+}
